@@ -228,7 +228,7 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova Th';
+  font-family: 'Proxima Nova Thin';
   src: url('../fonts/ProximaNovaT/ProximaNovaT-Thin.eot');
   src: local('Proxima Nova Thin'), local('ProximaNovaT-Thin'),
       url('../fonts/ProximaNovaT/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
@@ -239,9 +239,8 @@
   font-style: normal;
 }
 
-@mixin pn-thin {
-  font-family: 'Proxima Nova Th';
-  font-weight: 100;
+@mixin thin {
+  font-family: 'Proxima Nova Thin';
 }
 
 @font-face {
@@ -418,7 +417,7 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova Cn Th';
+  font-family: 'Proxima Nova Cn Thin';
   src: url('../fonts/ProximaNovaCond/ProximaNovaCond-Thin.eot');
   src: local('Proxima Nova Condensed Thin'), local('ProximaNovaCond-Thin'),
       url('../fonts/ProximaNovaCond/ProximaNovaCond-Thin.eot?#iefix') format('embedded-opentype'),
@@ -427,6 +426,10 @@
       url('../fonts/ProximaNovaCond/ProximaNovaCond-Thin.svg#ProximaNovaCond-Thin') format('svg');
   font-weight: 100;
   font-style: normal;
+}
+
+@mixin cn-thin {
+  font-family: 'Proxima Nova Cn Thin';
 }
 
 @font-face {

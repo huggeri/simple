@@ -1,8 +1,9 @@
 .my-dots
   position: absolute
-  bottom: -25px
+  bottom: 28px
   display: block
-  width: 490px
+  width: 100%
+  max-width: 1920px
   padding: 0
   list-style: none
   text-align: center
@@ -10,8 +11,8 @@
 .my-dots li 
   position: relative
   display: inline-block
-  width: 15px
-  height: 15px
+  width: 20px
+  height: 20px
   margin: 0 5px
   padding: 0
 
@@ -19,14 +20,13 @@
   font-size: 0
   line-height: 0
   display: block
-  width: 15px
-  height: 15px
+  width: 20px
+  height: 20px
   padding: 5px
   color: transparent
   border: 0
-  border-radius: 50%
   outline: none
-  background: grey
+  background: $bgc-color-1
 
 .my-dots li button:hover,
 .my-dots li button:focus 
@@ -37,4 +37,4 @@
   content: ''
   
 .my-dots li.slick-active button
-  background: yellow
+  background: $main-color
