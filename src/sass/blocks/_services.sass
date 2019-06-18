@@ -1,0 +1,54 @@
+.services
+  &__bgc
+    margin-top: 133px
+    background: $bgc-color-2
+    padding-top: 105px
+    padding-bottom: 97px
+
+  &__block
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-left: 32px
+  
+  &__item
+    width: 377px
+    height: 236px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 21px
+    text-align: center
+    background-color: $main-color
+    background-size: cover
+    background-repeat: no-repeat 
+    &:nth-child(1), &:nth-child(4)
+      background-image: url('../img/services/radiator.jpg')
+    &:nth-child(2), &:nth-child(5)
+      background-image: url('../img/services/plumber.jpg')
+    &:nth-child(3), &:nth-child(6)
+      background-image: url('../img/services/pipes.jpg')
+    &:hover
+      .services
+        &__text
+          color: $text-color
+        &__button
+          +thin
+          background-color: $text-color
+          color: $bgc-color-1
+
+  &__text
+    color: $bgc-color-1
+    +reg
+    font-size: 20px
+    line-height: 26px
+    margin-top: 58px
+    margin-bottom: 25px
+
+  &__button
+    width: 138px
+    height: 33px
+    +semibold
+    font-size: 15px
+    
