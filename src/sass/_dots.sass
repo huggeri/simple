@@ -1,0 +1,40 @@
+.my-dots
+  position: absolute
+  bottom: -25px
+  display: block
+  width: 490px
+  padding: 0
+  list-style: none
+  text-align: center
+
+.my-dots li 
+  position: relative
+  display: inline-block
+  width: 15px
+  height: 15px
+  margin: 0 5px
+  padding: 0
+
+.my-dots li button 
+  font-size: 0
+  line-height: 0
+  display: block
+  width: 15px
+  height: 15px
+  padding: 5px
+  color: transparent
+  border: 0
+  border-radius: 50%
+  outline: none
+  background: grey
+
+.my-dots li button:hover,
+.my-dots li button:focus 
+  outline: none
+  cursor: pointer
+
+.my-dots li button:before 
+  content: ''
+  
+.my-dots li.slick-active button
+  background: yellow
