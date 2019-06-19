@@ -64,7 +64,7 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova - Extrabld';
+  font-family: 'Proxima Nova - Extrabold';
   src: url('../fonts/ProximaNova/ProximaNova-Extrabld.eot');
   src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
       url('../fonts/ProximaNova/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
@@ -75,8 +75,8 @@
   font-style: normal;
 }
 
-@mixin pn-extrabold {
-  font-family: 'Proxima Nova - Extrabld';
+@mixin extrabold {
+  font-family: 'Proxima Nova - Extrabold';
 }
 
 @font-face {
@@ -176,7 +176,7 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova Rg';
+  font-family: 'Proxima Nova Bold';
   src: url('../fonts/ProximaNova/ProximaNova-Bold.eot');
   src: local('Proxima Nova Bold'), local('ProximaNova-Bold'),
       url('../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
@@ -185,6 +185,10 @@
       url('../fonts/ProximaNova/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
+}
+
+@mixin bold {
+  font-family: 'Proxima Nova Bold';
 }
 
 @font-face {

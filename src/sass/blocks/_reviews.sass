@@ -1,0 +1,78 @@
+.reviews
+  &-section
+    .my-dots
+      padding-top: 78px
+      padding-right: 30px
+
+  &__bgc
+    margin-top: 140px
+    background: $text-color
+    padding-top: 102px
+    padding-bottom: 135px
+
+  &__title
+    top: -52px
+
+  &-block
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-left: 30px
+    padding-top: 10px
+
+  &__item
+    position: relative
+    max-width: 470px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-top: 3px
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 35px
+      height: 35px
+      border-radius: 50%
+      border-style: none
+      background-image: url('../img/reviews/quotes.png')
+      background-size: cover
+      margin-top: -2px
+      margin-left: 35px
+
+  &__name
+    +semibold
+    font-size: 20px
+    line-height: 28px
+    color: $main-color
+    margin-top: 10px
+
+  &__text
+    max-height: 87px
+    +reg
+    font-size: 20px
+    line-height: 28px
+    color: $bgc-color-1
+    margin: 15px 0 20px 0
+    overflow: hidden
+    text-overflow: ellipsis
+
+.likes
+  display: flex
+  justify-content: space-between
+  width: 110px
+  img
+    display: inline-block !important
+  
+  &__count
+    +reg
+    font-size: 15px
+    line-height: 28px
+    color: $bgc-color-1
+    margin-left: 4px
+
+.slide
+  &:nth-child(even)
+    .reviews__item
+      float: right
