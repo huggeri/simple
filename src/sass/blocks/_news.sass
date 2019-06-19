@@ -1,0 +1,67 @@
+.new
+  &__title
+    +semibold
+    font-size: 20px
+    line-height: 28px
+    text-transform: uppercase
+    margin-bottom: 10px
+    letter-spacing: 0.2px
+
+  &__date
+    +light-reg
+    margin-right: 45px
+    font-size: 16px
+    line-height: 28px
+    text-transform: uppercase
+    margin-top: 20px
+    margin-bottom: 4px
+
+    &_day
+      display: inline-block
+      +semibold
+      background-color: $main-color
+      width: 25px
+      height: 25px
+      text-align: center
+
+  &s
+    &__bgc
+      margin-top: 145px
+      background: $bgc-color-2
+      padding-top: 90px
+      padding-bottom: 70px
+    
+    &__title
+      top: -52px
+
+    &-block
+      display: flex
+      justify-content: space-between
+      padding-left: 30px
+
+    &__item
+      max-width: 377px
+
+    &__info
+      display: flex
+      justify-content: space-between
+
+    &__text
+      +reg
+      max-width: 323px
+      max-height: 225px
+      font-size: 18px
+      line-height: 28px
+      opacity: 0.83
+      margin-top: 0
+      overflow: hidden
+      text-overflow: ellipsis
+
+    &__button
+      display: block
+      +semibold
+      width: 300px
+      height: 58px
+      margin: 50px auto 0 auto
+      font-size: 20px
+      line-height: 28px

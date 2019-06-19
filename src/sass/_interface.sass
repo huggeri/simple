@@ -4,6 +4,9 @@
 body
   margin: 0 auto
 
+input, button, a
+  outline: none
+
 .section
   max-width: 1920px
   margin: 0
@@ -31,3 +34,49 @@ body
   text-transform: uppercase
   border: none
   color: $text-color
+
+.form
+  width: 397px
+  display: flex
+  flex-direction: column 
+  align-items: center
+  background-color: $bgc-color-1
+  box-shadow: 3px -2px 20px -3px $text-color
+  padding-top: 45px
+  padding-bottom: 58px
+
+  &__title
+    +extrabold
+    font-size: 20px
+    line-height: 28px
+    text-transform: uppercase
+
+    &_yellow
+      color: $main-color
+
+  &__name, &__phone
+    +reg
+    width: 305px
+    font-size: 18px
+    line-height: 28px
+    color: $text-color
+    border: $text-color 1px solid
+    border-top-style: none
+    border-right-style: none
+    border-left-style: none
+    margin-top: 35px
+
+    &:placeholder-shown
+      +reg-italic
+      font-size: 18px
+      line-height: 28px
+      opacity: 0.65
+      color: $text-color
+
+  &__button
+    +semibold
+    font-size: 20px
+    line-height: 28px
+    width: 304px
+    height: 58px
+    margin-top: 65px

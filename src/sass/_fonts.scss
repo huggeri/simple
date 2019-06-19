@@ -397,7 +397,7 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova Lt';
+  font-family: 'Proxima Nova Light';
   src: url('../fonts/ProximaNova/ProximaNova-Light.eot');
   src: local('Proxima Nova Light'), local('ProximaNova-Light'),
       url('../fonts/ProximaNova/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
@@ -406,6 +406,10 @@
       url('../fonts/ProximaNova/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
   font-weight: 300;
   font-style: normal;
+}
+
+@mixin light-reg {
+  font-family: 'Proxima Nova Light';
 }
 
 @font-face {
@@ -437,7 +441,7 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova Rg';
+  font-family: 'Proxima Nova Rg Italic';
   src: url('../fonts/ProximaNova/ProximaNova-RegularIt.eot');
   src: local('Proxima Nova Regular Italic'), local('ProximaNova-RegularIt'),
       url('../fonts/ProximaNova/ProximaNova-RegularIt.eot?#iefix') format('embedded-opentype'),
@@ -446,6 +450,10 @@
       url('../fonts/ProximaNova/ProximaNova-RegularIt.svg#ProximaNova-RegularIt') format('svg');
   font-weight: normal;
   font-style: italic;
+}
+
+@mixin reg-italic {
+  font-family: 'Proxima Nova Rg Italic';
 }
 
 @font-face {
