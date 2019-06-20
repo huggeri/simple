@@ -54,8 +54,19 @@
       margin-right: 6px
 
   &__mail
+    position: relative
     display: flex
     align-items: center
     
     img 
       margin-right: 8px
+
+    &:after
+      content: ''
+      position: absolute
+      top: 13px
+      right: -27px
+      width: 1px
+      height: 15px
+      background-color: $bgc-color-1
+      opacity: 0.33

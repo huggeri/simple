@@ -1,15 +1,27 @@
 .advantages
   &-section
     padding-top: 143px
-    background: $bgc-color-2
+
+  &__bgc
+    margin-left: 0
 
   &__title
     top: 90px
 
   &-block
+    position: relative
     display: flex
     justify-content: space-between
     padding: 95px 0 60px 32px
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 63%
+      height: 100%
+      background-color: $bgc-color-2
+      z-index: -1
 
   &__images
     display: flex

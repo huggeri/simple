@@ -41,6 +41,9 @@
 
     &__item
       max-width: 377px
+      &:hover
+        .news__text
+          text-decoration: underline
 
     &__info
       display: flex
@@ -65,3 +68,11 @@
       margin: 50px auto 0 auto
       font-size: 20px
       line-height: 28px
+
+.text-shadow
+  text-shadow: -2px -2px $text-shadow-color, -2px 2px $text-shadow-color, 2px -2px $text-shadow-color, 2px 2px $text-shadow-color
+
+.underline
+  background-size: 1px 1em
+  box-shadow: inset 0 -0.175em $text-shadow-color, inset 0 -0.205em $text-color
+  display: inline

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.upper-section').slick( {
+  $('.general-section').slick( {
     infinite: false,
     dots: true,
     dotsClass: 'my-dots',
