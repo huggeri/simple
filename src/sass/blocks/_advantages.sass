@@ -11,6 +11,7 @@
   &-block
     position: relative
     display: flex
+    flex-direction: row
     justify-content: space-between
     padding: 95px 0 60px 32px
     &:after
@@ -85,3 +86,149 @@
     font-size: 35px
     line-height: 25px
     text-transform: uppercase
+
+@media (max-width: 1300px)
+  .advantages
+    &__item
+      width: 160px
+      height: 135.75px
+
+    &__images
+      max-width: 550px
+
+    &-block
+      &:after
+        width: 58%
+
+    &__text
+      font-size: 16px
+      letter-spacing: -0.25px
+      line-height: 1.2
+
+  .list
+    &__counter
+      font-size: 32px
+    &__text
+      font-size: 19px
+      letter-spacing: -0.3px
+
+@media (max-width: 1199px)
+  .advantages
+    &__title
+      top: 94px
+
+    &-block
+      flex-direction: column
+      padding-bottom: 30px
+      &:after
+        width: 85%
+
+  .list
+    &-block
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: flex-start
+      padding-top: 60px
+      padding-bottom: 0
+
+    &__item
+      width: 45%
+      margin-bottom: 40px
+      align-items: center
+      &:nth-child(odd)
+        margin-right: 40px
+
+    &__counter
+      margin-right: 20px
+
+    &__dash
+      display: none
+
+@media (max-width: 768px)
+  .advantages
+    &-section
+      padding-top: 100px
+
+    &-block
+      flex-wrap: wrap
+      padding: 40px 30px 60px 30px
+      width: 550px
+      margin: 0 auto
+
+      &:after
+        display: none
+      
+    &__title
+      top: -24px
+
+    &__bgc
+      margin: 0
+      background-color: $bgc-color-2
+
+    &__images
+      justify-content: center
+
+    &__item
+      width: 198px
+      height: 168px
+      margin: 20px
+
+    &__text
+      font-size: 16px
+      letter-spacing: 0.35px
+      line-height: 1.2
+
+    &__list
+      margin-top: 20px
+
+  .list
+    &-block
+      flex-direction: column
+      padding-top: 30px
+
+    &__item
+      width: 100%
+      align-items: flex-start
+
+    &__dash
+      display: inline-block
+
+    &__counter
+      margin-right: 0
+
+@media (max-width: 567px)
+  .advantages
+    &-block
+      width: 290px
+      padding-bottom: 50px
+
+    &__text
+      font-size: 14px
+      max-width: 150px
+
+    &__item
+      margin: 15px 0
+
+    &__image
+      margin-top: 30px
+
+    &__list
+      margin-top: 0
+
+  .list
+    &__item
+      text-align: center
+      width: 100%
+      flex-direction: column
+      align-items: center
+      margin-bottom: 20px
+
+    &__dash
+      margin: 5px 0
+
+    &__text
+      font-size: 15px
+      line-height: 1.2
+
+    &__counter
+      font-size: 26px

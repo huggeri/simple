@@ -6,6 +6,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    flex-wrap: wrap
     padding: 47px 0 47px 30px
 
   &__text
@@ -70,3 +71,63 @@
       height: 15px
       background-color: $bgc-color-1
       opacity: 0.33
+
+@media (max-width: 1199px)
+  .contacts
+    &__other
+      margin-top: 20px
+      flex-direction: column
+      width: 100%
+
+    &__social
+      margin-right: 30px
+
+    &__phone
+      margin-left: 0
+
+    &__mail
+      &:after 
+        display: none
+
+    &__text
+      font-size: 18px
+
+      &_small
+        line-height: 1.4
+
+      &_bold
+        line-height: 1.2
+
+@media (max-width: 567px)
+  .contacts
+    &-block
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      padding: 20px
+
+    &__text
+      font-size: 16px
+      line-height: 1.2
+
+      &_small
+        font-size: 15px
+      &_bold
+        font-size: 15px
+        line-height: 2
+    &__site
+      margin: 0
+
+    &__social
+      padding-left: 0
+      margin-right: 0
+      margin-top: 20px
+      width: 100%
+      justify-content: space-between
+      padding-right: 30%
+
+    &__other
+      margin-top: 10px
+
+      img
+        margin-right: 13px

@@ -3,12 +3,6 @@ function makeBorder(bgcClass, blockClass, borderSide, distanse, newWidth) {
   $(bgcClass).css('width', newWidth);
   $(blockClass).css(('border-' + borderSide), (distanse + 'px solid rgba(241, 241, 241, 0.55)'));
 }
-// удаляем класс
-function deleteBgc(generalClass, bgcClass, blockClass, borderSide) {
-  $(generalClass).removeClass(bgcClass);
-  $(blockClass).css(('border-' + borderSide), '0');
-  $(generalClass).width($('.services-section .container').width());
-}
 
 $(document).ready(function() {
   //рассчёты для фона в шапке и преимуществах
@@ -24,22 +18,23 @@ $(document).ready(function() {
         $('.header-block .container').addClass('header__bgc');
       }
       makeBorder('.header__bgc', '.navbar', 'right', distanse, newWidth);
-      // меняем его в преимуществах 
+      $('.header__bgc').css('max-width', $('.services-section').width());
+      // меняем его в преимуществах
+      
       if(!$('.advantages-section .container').hasClass('advantages__bgc')) {
         $('.advantages-section .container').addClass('advantages__bgc');
       }
-      makeBorder('.advantages__bgc', '.advantages-block', 'left', distanse, newWidth);
-      //двигаем соответственно advantages__title
-      $('.advantages__title').css('left', distanse);
-    }
-    // если бордер вдруг получется отрицательный, то мы удалем класс и возвращаем всё на место
-    else {
-      if($('.header-block .container').hasClass('header__bgc')) {
-        deleteBgc('.header-block .container', 'header__bgc', '.navbar', 'right');
+      if($(window).width() > 768) { 
+        makeBorder('.advantages__bgc', '.advantages-block', 'left', distanse, newWidth);
+        //двигаем соответственно advantages__title
+        $('.advantages__title').css('left', distanse);
+        $('.advantages__bgc').css('max-width', '100%');
       }
-      if($('.advantages-section .container').hasClass('advantages__bgc')) {
-        deleteBgc('.advantages-section .container', 'advantages__bgc', '.advantages-block', 'left');
+      else {
+        $('.advantages-block').css('border-left-width', '0');
         $('.advantages__title').css('left', '0');
+        $('.advantages__bgc').css('max-width', $('.services-section').width());
+        $('.advantages__bgc').css('width', $('.services-section').width());
       }
     }
   }

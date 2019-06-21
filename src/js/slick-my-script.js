@@ -5,7 +5,9 @@ $(document).ready(function() {
     dotsClass: 'my-dots',
     arrows: false,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000
   });
 
   $('.reviews-block').slick( {
@@ -14,6 +16,16 @@ $(document).ready(function() {
     dotsClass: 'my-dots',
     arrows: false,
     slidesToShow: 2,
-    slidesToScroll: 2
+    slidesToScroll: 2,
+
+    responsive: [ 
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 });

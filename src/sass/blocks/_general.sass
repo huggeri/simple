@@ -11,6 +11,7 @@
     padding-top: 180px
     padding-bottom: 270px
     padding-left: 55px
+    outline: none
 
   &__title
     color: $main-color
@@ -31,6 +32,7 @@
     margin-bottom: 23px
 
   &__text
+    display: block
     opacity: 0.42
     color: $bgc-color-1
     +reg
@@ -47,3 +49,70 @@
     font-size: 18px
     line-height: 40px
     margin-top: 50px
+
+@media (max-width: 1199px)
+  .general
+    &__title
+      font-size: 25px
+
+    &__subtitle
+      font-size: 25px
+
+    &__item
+      padding-top: 70px
+      padding-bottom: 100px
+
+    &__text
+      font-size: 18px
+      max-width: 650px
+
+@media (max-width: 768px)
+  .general
+    &__item
+      padding-left: 30px
+
+    &__title
+      font-size: 20px
+      max-width: 520px
+
+    &__subtitle
+      font-size: 20px
+
+    &__text
+      font-size: 18px
+      line-height: 1.4
+      max-width: 500px
+
+    &__button
+      width: 140px
+      height: 35px
+      margin-top: 30px
+      font-size: 14px
+      line-height: 1.4
+
+@media (max-width: 567px)
+  .general
+    &-section
+      .my-dots
+        padding-left: 0
+
+    &__item
+      text-align: center
+      padding-left: 0
+
+    &__title
+      font-size: 18px
+      max-width: 290px
+
+    &__subtitle
+      font-size: 18px
+
+    &__text
+      font-size: 14px
+      line-height: 1.2
+      max-width: 260px
+      margin: 0 auto
+    
+    &__button
+      margin: 0 auto
+      margin-top: 50px

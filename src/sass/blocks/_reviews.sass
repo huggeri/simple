@@ -8,7 +8,7 @@
     margin-top: 140px
     background: $text-color
     padding-top: 102px
-    padding-bottom: 135px
+    padding-bottom: 165px
 
   &__title
     top: -52px
@@ -28,6 +28,7 @@
     align-items: center
     text-align: center
     margin-top: 3px
+    outline: none
     &:before
       content: ''
       position: absolute
@@ -73,6 +74,80 @@
     margin-left: 4px
 
 .slide
+  outline: none
   &:nth-child(even)
     .reviews__item
       float: right
+
+@media (max-width: 1199px)
+  .reviews
+    &-section
+      .my-dots
+        padding-top: 30px
+        padding-right: 30px
+
+    &__bgc
+      padding-bottom: 120px
+
+    &__title
+      top: -47px
+
+    &__item
+      margin: 3px auto 0 auto
+
+    &__name
+      font-size: 18px
+
+    &__text
+      font-size: 18px
+      line-height: 1.4
+      max-height: 78px
+      margin-top: 10px
+
+  .slide
+    &:nth-child(even)
+      .reviews__item
+        float: none
+
+@media (max-width: 768px)
+  .reviews
+    &-section
+      .my-dots
+        width: 90%
+        padding-right: 0
+        margin-left: 25px
+
+    &-block
+      padding-left: 0
+
+    &__title
+      top: -65px
+
+    &__bgc
+      margin-top: 100px
+      padding-top: 40px
+
+@media (max-width: 567px)
+  .reviews
+    &-section
+      .my-dots
+        margin-left: 13px
+        margin-top: 0
+        padding: 20px
+
+    &__bgc
+      padding-top: 20px
+      padding-bottom: 80px
+
+    &__title
+      top: -45px
+
+    &__name
+      font-size: 16px
+    
+    &__text
+      font-size: 15px
+      line-height: 1.2
+      max-height: 57px
+      margin-top: 2px
+      max-width: 250px

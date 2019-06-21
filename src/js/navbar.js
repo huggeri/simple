@@ -1,31 +1,40 @@
 $(document).ready(function() {
-  // когда экран меньше какого-то и на мышь кликнули - появляется навигация
-  if($(window).width() <= 1190) {
-    $('#navbar__btn').click(function() {
-      if($('.navbar__nav').hasClass('hidden')) {
-        $('.navbar__nav').removeClass('hidden');
-      }
-      else {
-        $('.navbar__nav').addClass('hidden');
-        if(!$('.navbar__menu').hasClass('hidden')) {
-          $('.navbar__menu').addClass('hidden');
-        }
-      }
-    });
-  }
-  else {
-    $('.navbar__nav').removeClass('hidden');
-  }
-  //когда мышь на пункте навигации - появляется меню
-  $('#second').hover(function() {
+  // когда экран меньше 1200 - появляется бургер меню
+  showHideBurgerMenu();
+  // при изменении размера - бургер меню или обычное меню
+  $(window).resize(showHideBurgerMenu);
+  // при клике на бургер раскрывается меню
+  $('#burger').click(function() {
     if($('.navbar__menu').hasClass('hidden')) {
       $('.navbar__menu').removeClass('hidden');
     }
+    else {
+      $('.navbar__menu').addClass('hidden');
+    }
   });
-
+  // если убрали мышь с менб - оно исчезает
   $('.navbar__menu').mouseleave(function() {
     if(!$('.navbar__menu').hasClass('hidden')) {
       $('.navbar__menu').addClass('hidden');
     }
   });
 });
+
+function showHideBurgerMenu() {
+  if($(window).width() > 1199) {
+    if(!$('.navbar__burger-button').hasClass('hidden')) {
+      $('.navbar__burger-button').addClass('hidden');
+    }
+    if($('.navbar__menu').hasClass('hidden')) {
+      $('.navbar__menu').removeClass('hidden');
+    }
+  }
+  else {
+    if($('.navbar__burger-button').hasClass('hidden')) {
+      $('.navbar__burger-button').removeClass('hidden');
+    }
+    if(!$('.navbar__menu').hasClass('hidden')) {
+      $('.navbar__menu').addClass('hidden');
+    }
+  }
+}

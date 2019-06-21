@@ -31,6 +31,7 @@
     flex-direction: column
     justify-content: center
     align-items: center
+
   &__text
     position: relative
     margin: 0 27px
@@ -70,6 +71,21 @@
     flex-direction: row
     margin-top: 2px
 
+  &__burger-button
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 30px
+    padding: 5px
+    right: 50px
+    z-index: 1000
+
+    img
+      width: 20px
+      height: 15px
+
 .logo
   &__text
     +bold-it
@@ -105,3 +121,83 @@
     line-height: 1.4
     text-transform: none
     margin-top: 2px
+
+@media (max-width: 1199px)
+  .navbar
+    justify-content: flex-start
+    &:after
+      width: 55.7%
+
+    &__menu
+      position: absolute
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      z-index: 100
+      top: 26px
+      right: 50px
+      background-color: $main-color
+      padding: 15px 25px 20px 20px
+    
+    &__text
+      width: 70px
+      line-height: 30px
+      &:hover
+        +extrabold
+        color: $text-color
+        &:after
+          display: none
+
+      &:before
+        display: none
+
+    &__info
+      margin-left: 60px
+
+@media (max-width: 768px)
+  .navbar
+    justify-content: space-between
+    &:after
+      width: 80.8%
+    
+    &__info
+      margin-right: 250px
+      margin-top: 0
+
+  .info
+    margin-left: 0
+
+    &__text
+      display: none
+    
+    &__phone
+      margin-right: 10px
+
+@media (max-width: 567px)
+  .navbar
+    .container
+      margin-right: auto
+    
+    &:after
+      width: 78%
+
+    &__logo
+      margin-left: 0
+
+    &__info
+      margin-right: 45px
+      margin-top: -2px
+
+    &__burger-button
+      right: 0
+
+    &__menu
+      right: 0
+      margin-left: 0
+
+  .info
+    &__phone
+      margin-right: 0
+
+    &__image
+      margin-right: 5px

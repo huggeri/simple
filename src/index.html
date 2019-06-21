@@ -9,7 +9,6 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/slick.css">
 </head>
 <body>
@@ -28,6 +27,9 @@
           <a href="#" class="navbar__text">Новости</a>
           <a href="#" class="navbar__text">Контакты</a>
         </div>
+        <button class="button navbar__burger-button" id="burger">
+          <img src="img/header/burger.png" alt="меню">
+        </button>
         <!-- /.navbar__menu -->
         <div class="info navbar__info">
           <div class="info__phone">
@@ -435,8 +437,6 @@
   </main>
   
   <section class="section brif-section">
-    <div class="map" id="#map"></div>
-    <!-- /##map.map -->
     <form action="#" class="form brif__form" id="form">
       <span class="form__title">оставьте <span class="form__title_yellow">заявку</span></span>
       <!-- /.form__title -->
@@ -446,6 +446,8 @@
       <!-- /.button form__button -->
     </form>
     <!-- /.form brif__form -->
+    <div class="map" id="#map"></div>
+    <!-- /#map.map -->
   </section>
   <!-- /.section brif-section -->
 
@@ -496,6 +498,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/slick-my-script.js"></script>
   </footer>
 </body>
