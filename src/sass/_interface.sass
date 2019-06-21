@@ -117,6 +117,30 @@ a
     &-title
       font-size: 23px
       width: 200px
+  
+  .form
+    width: 300px
+
+    &__title
+      font-size: 18px
+
+    &__name, &__phone
+      font-size: 16px
+      width: 220px
+      margin-top: 25px
+      letter-spacing: -0.3px
+
+      &:placeholder-shown
+        font-size: 16px
+
+    &__name
+      margin-top: 30px
+
+    &__button
+      font-size: 18px
+      width: 220px
+      height: 50px
+      margin-top: 50px
 
 @media (max-width: 992px)
   .button
@@ -170,6 +194,8 @@ a
       font-size: 14px
       line-height: 1.2
       margin-top: 25px
+      background-color: transparent
+      letter-spacing: 0.1px
 
       &:placeholder-shown
         font-size: 14px
@@ -184,4 +210,3 @@ a
       width: 130px
       height: 45px
       margin-top: 40px
-      cursor: pointer
