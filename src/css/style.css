@@ -449,7 +449,8 @@ a {
 
 .button:hover {
   cursor: pointer;
-  background-color: #f5c000;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .form {
@@ -552,6 +553,7 @@ a {
 @media (max-width: 992px) {
   .button:hover {
     cursor: default;
+    color: #000000;
     background-color: #ffc800;
   }
   a {
