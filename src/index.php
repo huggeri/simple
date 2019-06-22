@@ -10,43 +10,31 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- Yandex.API maps -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=03cb9a38-8be7-466c-ae9f-098438c3b330&lang=ru_RU" type="text/javascript">
+  </script>
+  <!-- Yandex.API maps -->
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(54165706, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script> 
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-  <header class="header-block">
-    <div class="container">
-      <nav class="navbar header__navbar">
-        <div class="logo navbar__logo">
-          <img src="img/header/logo.jpg" alt="лого">
-          <span class="logo__text">logo</span>
-        </div>
-        <!-- /.navbar__logo -->
-        <div class="navbar__menu">
-          <a href="#" class="navbar__text">Услуги</a>
-          <a href="#" class="navbar__text">Цены</a>
-          <a href="#" class="navbar__text">Отзывы</a>
-          <a href="#" class="navbar__text">Новости</a>
-          <a href="#" class="navbar__text">Контакты</a>
-        </div>
-        <button class="button navbar__burger-button" id="burger">
-          <img src="img/header/burger.png" alt="меню">
-        </button>
-        <!-- /.navbar__menu -->
-        <div class="info navbar__info">
-          <div class="info__phone">
-            <div class="info__image">
-              <img src="img/header/receiver.png" alt="трубка телефонная">
-            </div>
-            <span class="info__text"><span class="info__text_reg">+7 (863)</span> 342-22-21</span>
-          </div>
-          <button class="button info__button">Заказать звонок</button>
-        </div>
-        <!-- /.navbar__info -->
-      </nav>
-      <!-- navbar header__navbar -->
-    </div>
-    <!-- ./container-->
-  </header>
-  <!-- ./header-block-->
+  
+  <?php include 'header.php'; ?>
 
   <main>
     <section class="section general-section">
@@ -101,13 +89,14 @@
     </section>
     <!-- /.section general-section -->
 
-    <section class="section services-section">
+    <section class="section services-section" id="services">
       <div class="services__bgc">
         <div class="container">
           <h2 class="section-title services__title">услуги</h2>
           <!-- /.section-title -->
           <div class="services__block">
             <div class="services__item">
+              <img class="services__image" src="img/services/radiator.jpg" alt="пример услуги">
               <p class="services__text" id="service-description">Монтаж систем<br>отопления</p>
               <!-- /.services__text -->
               <button class="button services__button" id="service-button">узнать цену</button>
@@ -115,6 +104,7 @@
             </div>
             <!-- /.services__item -->
             <div class="services__item">
+              <img class="services__image" src="img/services/plumber.jpg" alt="пример услуги">
               <p class="services__text" id="service-description">Монтаж сантехнического<br>оборудования</p>
               <!-- /.services__text -->
               <button class="button services__button" id="service-button">узнать цену</button>
@@ -122,6 +112,7 @@
             </div>
             <!-- /.services__item -->
             <div class="services__item">
+              <img class="services__image" src="img/services/pipes.jpg" alt="пример услуги">
               <p class="services__text" id="service-description">Монтаж канализационного<br>оборудования</p>
               <!-- /.services__text -->
               <button class="button services__button" id="service-button">узнать цену</button>
@@ -129,6 +120,7 @@
             </div>
             <!-- /.services__item -->
             <div class="services__item">
+              <img class="services__image" src="img/services/radiator.jpg" alt="пример услуги">
               <p class="services__text" id="service-description">Монтаж систем<br>отопления</p>
               <!-- /.services__text -->
               <button class="button services__button" id="service-button">узнать цену</button>
@@ -136,6 +128,7 @@
             </div>
             <!-- /.services__item -->
             <div class="services__item">
+              <img class="services__image" src="img/services/plumber.jpg" alt="пример услуги">
               <p class="services__text" id="service-description">Монтаж сантехнического<br>оборудования</p>
               <!-- /.services__text -->
               <button class="button services__button" id="service-button">узнать цену</button>
@@ -143,6 +136,7 @@
             </div>
             <!-- /.services__item -->
             <div class="services__item">
+              <img class="services__image" src="img/services/pipes.jpg" alt="пример услуги">
               <p class="services__text" id="service-description">Монтаж канализационного<br>оборудования</p>
               <!-- /.services__text -->
               <button class="button services__button" id="service-button">узнать цену</button>
@@ -163,42 +157,42 @@
         <!-- /.section-title -->
         <div class="advantages-block">
           <div class="advantages__images">
-            <div class="advantages__item">
+            <div class="advantages__item wow fadeInUp" data-wow-delay="0.1s">
               <div class="advantages__image">
                 <img src="img/advantages/warranty.png" alt="значок">
               </div>
               <span class="advantages__text">100 % гарантия качества</span>
             </div>
             <!-- /.advantages__item -->
-            <div class="advantages__item">
+            <div class="advantages__item wow fadeInDown" data-wow-delay="0.3s">
               <div class="advantages__image">
                 <img src="img/advantages/diagram.png" alt="диаграмма">
               </div>
               <span class="advantages__text">с нами выгодно</span>
             </div>
             <!-- /.advantages__item -->
-            <div class="advantages__item">
+            <div class="advantages__item wow fadeInUp" data-wow-delay="0.5s">
               <div class="advantages__image">
                 <img src="img/advantages/trophy.png" alt="кубок">
               </div>
               <span class="advantages__text">большой опыт</span>
             </div>
             <!-- /.advantages__item -->
-            <div class="advantages__item">
+            <div class="advantages__item wow fadeInDown" data-wow-delay="0.5s">
               <div class="advantages__image">
                 <img src="img/advantages/operator.png" alt="оператор">
               </div>
               <span class="advantages__text">быстрая онлайн поддержка</span>
             </div>
             <!-- /.advantages__item -->
-            <div class="advantages__item">
+            <div class="advantages__item wow fadeInUp" data-wow-delay="0.3s">
               <div class="advantages__image">
                 <img src="img/advantages/care.png" alt="руки">
               </div>
               <span class="advantages__text">с заботой<br>о клиенте</span>
             </div>
             <!-- /.advantages__item -->
-            <div class="advantages__item">
+            <div class="advantages__item wow fadeInDown" data-wow-delay="0.1s">
               <div class="advantages__image">
                 <img src="img/advantages/calendar.png" alt="календарь">
               </div>
@@ -209,25 +203,25 @@
           <!-- /.advantages__images -->
 
           <ul class="list-block advantages__list">
-            <li class="list__item">
+            <li class="list__item wow fadeInRight" data-wow-delay="0.2s">
               <span class="list__counter">1</span>
               <img class="list__dash" src="img/advantages/dash.png" alt="-">
               <p class="list__text">Вызов бригады на следующий день после звонка</p>
             </li>
             <!-- /.list__item -->
-            <li class="list__item">
+            <li class="list__item wow fadeInLeft" data-wow-delay="0.4s">
               <span class="list__counter">2</span>
               <img class="list__dash" src="img/advantages/dash.png" alt="-">
               <p class="list__text">Вся бригада имеет специальное образование</p>
             </li>
             <!-- /.list__item -->
-            <li class="list__item">
+            <li class="list__item wow fadeInRight" data-wow-delay="0.6s">
               <span class="list__counter">3</span>
               <img class="list__dash" src="img/advantages/dash.png" alt="-">
               <p class="list__text">Длительный срок на рынке</p>
             </li>
             <!-- /.list__item -->
-            <li class="list__item">
+            <li class="list__item wow fadeInLeft" data-wow-delay="0.8s">
               <span class="list__counter">4</span>
               <img class="list__dash" src="img/advantages/dash.png" alt="-">
               <p class="list__text">Опыт, качество и скорость</p>
@@ -242,7 +236,7 @@
     </section>
     <!-- /.section advantages-section -->
 
-    <section class="section reviews-section">
+    <section class="section reviews-section" id="reviews">
       <div class="reviews__bgc">
         <div class="container">
           <h2 class="section-title reviews__title">отзывы</h2>
@@ -377,7 +371,7 @@
     </section>
     <!-- /.section reviews-section -->
 
-    <div class="section news-section">
+    <div class="section news-section" id="news">
       <div class="news__bgc">
         <div class="container">
           <h2 class="section-title news__title">новости</h2>
@@ -437,11 +431,11 @@
   </main>
   
   <section class="section brif-section">
-    <form action="#" class="form brif__form" id="form">
+    <form target="_blank" action="#" class="form brif__form" id="form" method="get" onsubmit="if($('#form-phone').val().length > 16 && $('#form-name').val().length > 1 && !$('#form-phone').hasClass('invalid') && !$('#form-name').hasClass('invalid')) { ym(54165706, 'reachGoal', 'form'); return true; } else {return false;}">
       <span class="form__title">оставьте <span class="form__title_yellow">заявку</span></span>
       <!-- /.form__title -->
-      <input type="text" class="form__name" id="form-name" placeholder="Введите Ваше имя">
-      <input type="text" class="form__phone" id="form-phone" placeholder="Введите Ваш номер телефона">
+      <input type="text" class="form__name" id="form-name" name="username" placeholder="Введите Ваше имя">
+      <input type="text" class="form__phone" id="form-phone" name="phone" placeholder="Введите Ваш номер телефона">
       <button class="button form__button" id="form-button" type="submit">заказать звонок</button>
       <!-- /.button form__button -->
     </form>
@@ -451,55 +445,30 @@
   </section>
   <!-- /.section brif-section -->
 
-  <footer>
-    <section class="section contacts-section">
-      <div class="container">
-          <div class="contacts-block">
-              <div class="contacts__address">
-                <img src="img/footer/address.png" alt="геоуказатель">
-                <span class="contacts__text">г. Москва, ул. Советская 48 корп. 3</span>
-              </div>
-              <!-- /.contacts__address -->
-              <div class="contacts__social">
-                <a href="" class="contacts__site">
-                  <img src="img/footer/social-1.png" alt="инстаграм">
-                </a>
-                <a href="" class="contacts__site">
-                  <img src="img/footer/social-2.png" alt="вк">
-                </a>
-                <a href="" class="contacts__site"
-                ><img src="img/footer/social-3.png" alt="одноклассники">
-                </a>
-              </div>
-              <!-- /.contacts__social -->
-              <div class="contacts__other">
-                <div class="contacts__mail">
-                  <img src="img/footer/mail.png" alt="мэил">
-                  <a href="" class="contacts__text_small">infosanteh@gmail.com</a>
-                </div>
-                <!-- /.contacts__mail -->
-                <div class="contacts__phone">
-                  <img src="img/footer/phone.png" alt="телефон">
-                  <a href="" class="contacts__text_small">
-                    +7 (863)
-                    <span class="contacts__text_bold"> 342-22-21</span>
-                  </a>
-                </div>
-                <!-- /.contacts__phone -->
-              </div>
-              <!-- /.contacts__other -->
-          </div>
-          <!-- /.contacts-block -->
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section contacts-section -->
+  <?php include 'footer.php'; ?>
+  
+  <div class="modal hidden" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <h4 class="modal-dialog__text">Ваша заявка принята и успешно отправлена. Спасибо. Мы вам перезвоним.</h4>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/slick-my-script.js"></script>
-  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/slick-my-script.js"></script>
+  <script src="js/map.js"></script>
+
+  <!-- /Yandex.Metrika counter -->
+  <noscript><div><img src="https://mc.yandex.ru/watch/54165706" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </body>
 </html>

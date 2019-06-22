@@ -70,4 +70,39 @@ $(document).ready(function() {
     $('.new__title', this).removeClass('text-shadow');
     $('.new__title', this).removeClass('underline');
   });
+
+  // анимация
+  new WOW(
+    {
+      mobile: false
+    }
+  ).init();
+
+  // валидация формы
+  $('#form').validate({
+    errorElement: "div",
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      phone: {
+        required: true
+      }
+    },
+    messages: {
+      username: {
+        required: 'Заполните поле',
+        minlength: jQuery.validator.format('Допустимая длина 2-15 символов')
+      },
+      phone: {
+        required: 'Заполните поле'
+      }
+    },
+    errorClass: 'invalid'
+  });
+
+  //Маска для телефона
+  $('input[name=phone]').mask('8 (999) 999-99-99');
 });

@@ -21,6 +21,8 @@
       line-height: 40px
       color: $bgc-color-1
       text-decoration: none
+      &:hover
+        color: $main-color
 
     &_bold
       +bold
@@ -40,8 +42,27 @@
     align-items: center
     padding-left: 10px
 
+  &__image
+    width: 70%
+
   &__site
+    display: flex
+    justify-content: center
+    align-items: center
     margin: 0 5px
+    width: 26px
+    min-width: 26px
+    height: 26px
+    min-height: 26px
+    border-radius: 50%
+    border-style: 0
+    background-color: $bgc-color-1
+    &:first-child
+      .contacts__image
+        width: 80%
+        height: 77%
+    &:hover
+      background-color: $main-color
 
   &__other
     display: flex
@@ -50,6 +71,12 @@
     display: flex
     align-items: center
     margin-left: 50px
+    &:hover
+      .contacts__text
+        &_small
+          color: $main-color
+        &_bold
+          color: $main-color
 
     img 
       margin-right: 6px
@@ -98,13 +125,31 @@
       &_bold
         line-height: 1.2
 
+@media (max-width: 992px)
+  .contacts
+    &__site
+      &:hover
+        background-color: $bgc-color-1
+
+    &__text
+      &_small
+        &:hover
+          color: $bgc-color-1
+    
+    &__phone
+      &:hover
+        .contacts__text
+          &_small
+            color: $bgc-color-1
+          &_bold
+            color: $bgc-color-1
+
 @media (max-width: 567px)
   .contacts
     &-block
       flex-direction: column
       justify-content: flex-start
       align-items: flex-start
-      padding: 20px
 
     &__text
       font-size: 16px
@@ -115,6 +160,7 @@
       &_bold
         font-size: 15px
         line-height: 2
+
     &__site
       margin: 0
 

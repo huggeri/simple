@@ -7,31 +7,39 @@
     position: absolute
     top: 141px
     left: 7.8%
+    z-index: 1
+
+.map
+  width: 100%
+  height: 666px
+  z-index: 0
 
 @media (max-width: 1199px)
   .brif
-    &-section
-      height: 530px
-
     &__form
-      top: 70px
       left: 8%
 
 @media (max-width: 768px)
   .brif
     &-section
-      min-height: 550px
-      height: auto
-
+      height: 900px
     &__form
-      position: relative
-      top: 100px
+      top: 80px
       left: 0
+      right: 0
       margin: 0 auto
-      margin-bottom: 70px
+
+  .map
+    height: 900px
 
 @media (max-width: 567px)
   .brif
+    &-section
+      height: 750px
+
     &__form
       top: 70px
       margin-bottom: 50px
+
+  .map
+    height: 750px
