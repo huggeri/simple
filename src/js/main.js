@@ -5,6 +5,9 @@ function makeBorder(bgcClass, blockClass, borderSide, distanse, newWidth) {
 }
 
 $(document).ready(function() {
+  $('#form-name').val();
+  $('#form-phone').val();
+
   //рассчёты для фона в шапке и преимуществах
   function calcBgc() {
     // переменные для рассчёта фона
@@ -38,6 +41,7 @@ $(document).ready(function() {
       }
     }
   }
+
   // при загрузке документа
   calcBgc();
   // если экран поменялся - новые расчёты
@@ -78,6 +82,9 @@ $(document).ready(function() {
     }
   ).init();
 
+  //Маска для телефона
+  $('input[name=userphone]').mask('8 (999) 999-99-99');
+
   // валидация формы
   $('#form').validate({
     errorElement: "div",
@@ -87,7 +94,7 @@ $(document).ready(function() {
         minlength: 2,
         maxlength: 15
       },
-      phone: {
+      userphone: {
         required: true
       }
     },
@@ -96,13 +103,11 @@ $(document).ready(function() {
         required: 'Заполните поле',
         minlength: jQuery.validator.format('Допустимая длина 2-15 символов')
       },
-      phone: {
+      userphone: {
         required: 'Заполните поле'
       }
     },
     errorClass: 'invalid'
   });
 
-  //Маска для телефона
-  $('input[name=phone]').mask('8 (999) 999-99-99');
 });

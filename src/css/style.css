@@ -2371,4 +2371,28 @@ div.invalid {
     margin-right: 13px;
   }
 }
+
+.thanks {
+  background-color: rgba(241, 241, 241, 0.55);
+}
+
+.thanks .navbar__menu, .thanks .navbar__burger-button, .thanks .navbar__info {
+  display: none;
+}
+
+.thanks__navbar:after {
+  display: none;
+}
+
+.thanks-map-section {
+  position: relative;
+  height: 400px;
+  background-color: #ffffff;
+}
+
+.thanks-map__map {
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+}
 /*# sourceMappingURL=style.css.map */
