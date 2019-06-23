@@ -768,12 +768,19 @@ div.invalid {
 }
 
 .header-block {
+  position: relative;
   max-width: 1920px;
   margin: 0;
 }
 
 .header__bgc {
-  margin-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36%;
+  height: 100%;
+  background-color: rgba(241, 241, 241, 0.55);
+  z-index: -1;
 }
 
 .header__navbar {
@@ -781,7 +788,6 @@ div.invalid {
 }
 
 .navbar {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -795,17 +801,6 @@ div.invalid {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.navbar:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 34.1%;
-  height: 100%;
-  background-color: rgba(241, 241, 241, 0.55);
-  z-index: -1;
 }
 
 .navbar__logo {
@@ -968,13 +963,13 @@ div.invalid {
 }
 
 @media (max-width: 1199px) {
+  .header__bgc {
+    width: 60%;
+  }
   .navbar {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-  .navbar:after {
-    width: 55.7%;
   }
   .navbar__menu {
     position: absolute;
@@ -1038,13 +1033,13 @@ div.invalid {
 }
 
 @media (max-width: 768px) {
+  .header__bgc {
+    width: 81%;
+  }
   .navbar {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  .navbar:after {
-    width: 80.8%;
   }
   .navbar__info {
     margin-right: 250px;
@@ -1062,10 +1057,7 @@ div.invalid {
 }
 
 @media (max-width: 567px) {
-  .navbar .container {
-    margin-right: auto;
-  }
-  .navbar:after {
+  .header__bgc {
     width: 78%;
   }
   .navbar__logo {
@@ -1370,11 +1362,18 @@ div.invalid {
 }
 
 .advantages-section {
+  position: relative;
   padding-top: 143px;
 }
 
 .advantages__bgc {
-  margin-left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 61%;
+  height: 0;
+  background-color: rgba(241, 241, 241, 0.55);
+  z-index: -1;
 }
 
 .advantages__title {
@@ -1382,7 +1381,6 @@ div.invalid {
 }
 
 .advantages-block {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1394,17 +1392,6 @@ div.invalid {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 95px 0 60px 32px;
-}
-
-.advantages-block:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 63%;
-  height: 100%;
-  background-color: rgba(241, 241, 241, 0.55);
-  z-index: -1;
 }
 
 .advantages__images {
@@ -1515,9 +1502,6 @@ div.invalid {
   .advantages__images {
     max-width: 550px;
   }
-  .advantages-block:after {
-    width: 58%;
-  }
   .advantages__text {
     font-size: 16px;
     letter-spacing: -0.25px;
@@ -1542,9 +1526,6 @@ div.invalid {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-bottom: 30px;
-  }
-  .advantages-block:after {
-    width: 85%;
   }
   .list-block {
     -webkit-box-orient: horizontal;
@@ -1588,15 +1569,8 @@ div.invalid {
     width: 550px;
     margin: 0 auto;
   }
-  .advantages-block:after {
-    display: none;
-  }
   .advantages__title {
     top: -24px;
-  }
-  .advantages__bgc {
-    margin: 0;
-    background-color: rgba(241, 241, 241, 0.55);
   }
   .advantages__images {
     -webkit-box-pack: center;
@@ -2095,9 +2069,60 @@ div.invalid {
   z-index: 0;
 }
 
+.map-buttons {
+  position: fixed;
+  right: 10px;
+  top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  z-index: 1000;
+}
+
+.map-buttons__up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-bottom: 7px;
+}
+
+.map-buttons button {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.map-buttons button:hover {
+  background-color: transparent;
+}
+
+.map-buttons img {
+  width: 100%;
+}
+
+.map-buttons img:hover {
+  background-color: #ffc800;
+  border-style: none;
+  border-radius: 50%;
+}
+
 @media (max-width: 1199px) {
   .brif__form {
     left: 8%;
+  }
+}
+
+@media (max-width: 992px) {
+  .map-buttons img:hover {
+    background-color: transparent;
   }
 }
 

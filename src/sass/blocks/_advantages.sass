@@ -1,28 +1,25 @@
 .advantages
   &-section
+    position: relative
     padding-top: 143px
 
   &__bgc
-    margin-left: 0
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 61%
+    height: 0
+    background-color: $bgc-color-2
+    z-index: -1
 
   &__title
     top: 90px
 
   &-block
-    position: relative
     display: flex
     flex-direction: row
     justify-content: space-between
     padding: 95px 0 60px 32px
-    &:after
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 63%
-      height: 100%
-      background-color: $bgc-color-2
-      z-index: -1
 
   &__images
     display: flex
@@ -96,10 +93,6 @@
     &__images
       max-width: 550px
 
-    &-block
-      &:after
-        width: 58%
-
     &__text
       font-size: 16px
       letter-spacing: -0.25px
@@ -120,8 +113,6 @@
     &-block
       flex-direction: column
       padding-bottom: 30px
-      &:after
-        width: 85%
 
   .list
     &-block
@@ -154,16 +145,9 @@
       padding: 40px 30px 60px 30px
       width: 550px
       margin: 0 auto
-
-      &:after
-        display: none
       
     &__title
       top: -24px
-
-    &__bgc
-      margin: 0
-      background-color: $bgc-color-2
 
     &__images
       justify-content: center

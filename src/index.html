@@ -13,11 +13,6 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/animate.css">
 
-  <!-- Yandex.API maps -->
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=03cb9a38-8be7-466c-ae9f-098438c3b330&lang=ru_RU" type="text/javascript">
-  </script>
-  <!-- Yandex.API maps -->
-
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -30,13 +25,12 @@
         accurateTrackBounce:true,
         webvisor:true
     });
-  </script> 
-  <noscript><div><img src="https://mc.yandex.ru/watch/54165706" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
+  </script>
 </head>
 
 <body>
   <header class="header-block" id="top">
+    <div class="header__bgc"></div>
     <div class="container">
       <nav class="navbar header__navbar">
         <a href="index.html" class="logo navbar__logo">
@@ -190,6 +184,7 @@
     <!-- /.section services-section -->
 
     <section class="section advantages-section">
+      <div class="advantages__bgc"></div>
       <div class="container">
         <h2 class="section-title advantages__title">почему мы?</h2>
         <!-- /.section-title -->
@@ -480,6 +475,16 @@
     <!-- /.form brif__form -->
     <div class="map" id="#map"></div>
     <!-- /#map.map -->
+    
+    <div class="map-buttons">
+      <button class="button map-buttons__up" id="up-button">
+        <img src="img/brif/down.png" alt="вверх">
+      </button>
+      <button class="button map-buttons__down" id="down-button">
+        <img src="img/brif/down.png" alt="вниз">
+      </button>
+    </div>
+    <!-- /.map-buttons -->
   </section>
   <!-- /.section brif-section -->
 
@@ -536,6 +541,19 @@
     <!-- /.modal-dialog -->
   </div>
   <!-- /.modal -->
+  
+  <!-- /Yandex.Metrika counter -->
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/54165706" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- Yandex.API maps -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=03cb9a38-8be7-466c-ae9f-098438c3b330&lang=ru_RU" type="text/javascript">
+  </script>
+  <!-- Yandex.API maps -->
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>

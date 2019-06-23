@@ -1,29 +1,26 @@
 .header
   &-block
+    position: relative
     max-width: 1920px
     margin: 0
 
   &__bgc
-    margin-right: 0
+    position: absolute
+    top: 0
+    right: 0
+    width: 36%
+    height: 100%
+    background-color: $bgc-color-2
+    z-index: -1
 
   &__navbar
     height: 82px
 
 .navbar
-  position: relative
   display: flex
   flex-direction: row
   align-items: center
   justify-content: space-between
-  &:after
-    content: ''
-    position: absolute
-    top: 0
-    right: 0
-    width: 34.1%
-    height: 100%
-    background-color: $bgc-color-2
-    z-index: -1
 
   &__logo
     margin-left: 30px
@@ -136,10 +133,11 @@
     margin-top: 2px
 
 @media (max-width: 1199px)
+  .header
+    &__bgc
+      width: 60%
   .navbar
     justify-content: flex-start
-    &:after
-      width: 55.7%
 
     &__menu
       position: absolute
@@ -190,10 +188,12 @@
             color: $text-color
 
 @media (max-width: 768px)
+  .header
+    &__bgc
+      width: 81%
+  
   .navbar
     justify-content: space-between
-    &:after
-      width: 80.8%
     
     &__info
       margin-right: 250px
@@ -209,13 +209,11 @@
       margin-right: 10px
 
 @media (max-width: 567px)
-  .navbar
-    .container
-      margin-right: auto
-    
-    &:after
+  .header
+    &__bgc
       width: 78%
 
+  .navbar
     &__logo
       margin-left: 0
 

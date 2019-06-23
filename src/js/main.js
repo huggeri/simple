@@ -1,48 +1,45 @@
-// рассчёт ширины части фона
-function makeBorder(bgcClass, blockClass, borderSide, distanse, newWidth) {
-  $(bgcClass).css('width', newWidth);
-  $(blockClass).css(('border-' + borderSide), (distanse + 'px solid rgba(241, 241, 241, 0.55)'));
-}
-
 $(document).ready(function() {
+  // очищаем форму
   $('#form-name').val('');
   $('#form-phone').val('');
+  
+  // присваиваем высоту контейнеру
+  $('.advantages__bgc').height($('.advantages-section .container').height());
   
   //рассчёты для фона в шапке и преимуществах
   function calcBgc() {
     // переменные для рассчёта фона
-    // используется секция, размеры которой не меняются диначески
-    var distanse = ($('.services-section').width() - $('.services-section .container').width()) / 2;
-    var newWidth = distanse + $('.services-section .container').width();
-    // если бордер будет больше 0
-    if (distanse > 0) {
-      // меняем его в шапке
-      if(!$('.header-block .container').hasClass('header__bgc')) {
-        $('.header-block .container').addClass('header__bgc');
-      }
-      makeBorder('.header__bgc', '.navbar', 'right', distanse, newWidth);
-      $('.header__bgc').css('max-width', $('.services-section').width());
-      // меняем его в преимуществах
-      
-      if(!$('.advantages-section .container').hasClass('advantages__bgc')) {
-        $('.advantages-section .container').addClass('advantages__bgc');
-      }
-      if($(window).width() > 768) { 
-        makeBorder('.advantages__bgc', '.advantages-block', 'left', distanse, newWidth);
-        //двигаем соответственно advantages__title
-        $('.advantages__title').css('left', distanse);
-        $('.advantages__bgc').css('max-width', '100%');
-      }
-      else {
-        $('.advantages-block').css('border-left-width', '0');
-        $('.advantages__title').css('left', '0');
-        $('.advantages__bgc').css('max-width', $('.services-section').width());
-        $('.advantages__bgc').css('width', $('.services-section').width());
-      }
+    var percent, percentAdv;
+    var distanse = ($('.header-block').width() - $('.header-block .container').width()) / 2;
+    var add = 0;
+
+    // width зависит от размера окна и контейнеров
+    if ($(window).width() > 1300) {
+      percent = 34.1, percentAdv = 63;
+    } 
+    else if ($(window).width() > 1199) {
+      percent = 34.1, percentAdv = 58;
     }
+    else if ($(window).width() > 768) {
+      percent = 55.7, percentAdv = 85;
+    }
+    else if ($(window).width() > 567) {
+      percent = 80.8, percentAdv = 100, add = distanse;
+    }
+    else {
+      percent = 78, percentAdv = 100, add = distanse;
+    }
+
+    // считаем ширину
+    var newWidth = distanse + $('.header-block .container').width() * percent / 100;
+    var newWidth2 = add + distanse + $('.advantages-section .container').width() * percentAdv / 100;
+
+    // присваиваем ширину
+    $('.header__bgc').width(newWidth);
+    $('.advantages__bgc').width(newWidth2);
   }
 
-  // при загрузке документа
+  // присваиваем ширину при загрузке документа
   calcBgc();
   // если экран поменялся - новые расчёты
   $(window).resize(calcBgc);
@@ -69,7 +66,7 @@ $(document).ready(function() {
     $('.new__title', this).addClass('text-shadow');
     $('.new__title', this).addClass('underline');
   });
-  // убираем подчеркивания в new__title прои уходе мыши с объекта
+  // убираем подчеркивания в new__title при уходе мыши с объекта
   $('.news__item').mouseleave(function() {
     $('.new__title', this).removeClass('text-shadow');
     $('.new__title', this).removeClass('underline');
@@ -109,5 +106,4 @@ $(document).ready(function() {
     },
     errorClass: 'invalid'
   });
-
 });
