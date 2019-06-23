@@ -1,10 +1,8 @@
 $(document).ready(function() {
+  $('.navigate-buttons').fadeOut('fast');
   // очищаем форму
   $('#form-name').val('');
   $('#form-phone').val('');
-  
-  // присваиваем высоту контейнеру
-  $('.advantages__bgc').height($('.advantages-section .container').height());
   
   //рассчёты для фона в шапке и преимуществах
   function calcBgc() {
@@ -37,6 +35,8 @@ $(document).ready(function() {
     // присваиваем ширину
     $('.header__bgc').width(newWidth);
     $('.advantages__bgc').width(newWidth2);
+    // присваиваем высоту контейнеру
+    $('.advantages__bgc').height($('.advantages-section .container').height());
   }
 
   // присваиваем ширину при загрузке документа
@@ -50,26 +50,46 @@ $(document).ready(function() {
   var serviceText, serviceTextButton;
   // изменение текста при наведении в услугах (services)
   $('.services__item').mouseenter(function() {
-    serviceText = $('#service-description', this).html();
-    serviceTextButton = $('#service-button', this).html();
-    $('#service-description', this).html(hoverText);
-    $('#service-button', this).html(hoverTextButton);
+    serviceText = $('.services__text', this).html();
+    serviceTextButton = $('.services__button', this).html();
+    $('.services__text', this).html(hoverText);
+    $('.services__button', this).html(hoverTextButton);
   });
   // и назад, при убирании мыши
   $('.services__item').mouseleave(function() {
-    $('#service-description', this).html(serviceText);
-    $('#service-button', this).html(serviceTextButton);
+    $('.services__text', this).html(serviceText);
+    $('.services__button', this).html(serviceTextButton);
   });
 
-  // подключение подчеркивания в new__title
-  $('.news__item').mouseenter(function() {
-    $('.new__title', this).addClass('text-shadow');
-    $('.new__title', this).addClass('underline');
+  // настройки слайдера
+  $('.general-section').slick( {
+    infinite: false,
+    dots: true,
+    dotsClass: 'my-dots',
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000
   });
-  // убираем подчеркивания в new__title при уходе мыши с объекта
-  $('.news__item').mouseleave(function() {
-    $('.new__title', this).removeClass('text-shadow');
-    $('.new__title', this).removeClass('underline');
+
+  $('.reviews-block').slick( {
+    infinite: false,
+    dots: true,
+    dotsClass: 'my-dots',
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+
+    responsive: [ 
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   // анимация
@@ -105,5 +125,24 @@ $(document).ready(function() {
       }
     },
     errorClass: 'invalid'
+  });
+
+  // кнопки вверх-вниз
+  $('#up-button').click(function() {
+    $('html, body').animate({scrollTop: 0}, 2000);
+  });
+
+  $('#down-button').click(function() {
+    $('html, body').animate({scrollTop: (0 + $('html, body').height())}, 2000);
+  });
+
+  // появляются и исчезают кнопки
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 400) {
+      $('.navigate-buttons').fadeIn('slow', 'linear');
+    }
+    else {
+      $('.navigate-buttons').fadeOut('fast', 'swing');
+    }
   });
 });

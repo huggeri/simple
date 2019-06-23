@@ -17,11 +17,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера GMAIL
-    $mail->Username   = 'tsuk-19@mail.ru'; // Логин на почте
-    $mail->Password   = 'qwzx1234'; // Пароль на почте
+    $mail->Username   = 'fr_fr_200111@mail.ru'; // Логин на почте
+    $mail->Password   = '12ergnhyQ'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = '465';
-    $mail->setFrom('tsuk-19@mail.ru', 'baba'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('fr_fr_200111@mail.ru', 'baba'); // Адрес самой почты и имя отправителя
     // Получатель письма
     $mail->addAddress('katq228@gmail.com');  
 
@@ -36,7 +36,7 @@ try {
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {
-    header('location: thank-you.html');
+    echo "Сообщение успешно отправлено";
 } else {
 echo "Сообщение не было отправлено. Неверно указаны настройки вашей почты";
 }

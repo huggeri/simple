@@ -5,32 +5,8 @@ $(document).ready(function() {
       mapInited = true;
       ymaps.ready(init);
     }
-
-    showHide('.map-buttons', '.map');
-  });
-
-  $('#up-button').click(function() {
-    $('html, body').animate({scrollTop: ($('.map').offset().top - 500)}, 1000);
-  });
-
-  $('#down-button').click(function() {
-    $('html, body').animate({scrollTop: ($('.map').offset().top + $('.map').height() + 500)}, 1000);
   });
 });
-
-function showHide(elem, elem2) {
-
-  var elem2Top = $(elem2).offset().top;
-  var elem2Bottom = elem2Top + $(elem2).height();
-
-  if($(window).scrollTop() >= elem2Top - 100 && $(window).scrollTop() <= elem2Bottom + 100 && ($(elem).hasClass('hidden'))) {
-    $(elem).removeClass('hidden');
-  }
-
-  if(($(window).scrollTop() < elem2Top - 100 || $(window).height() && $(window).scrollTop() > elem2Bottom + 100) && (!$(elem).hasClass('hidden'))) {
-    $(elem).addClass('hidden');
-  }
-}
 
 function init(){
   var myMap;
@@ -40,18 +16,14 @@ function init(){
       myMap = new ymaps.Map("#map", {
         center: [55.86439844, 37.50781480],
         zoom: 16,
-        controls: ['zoomControl', 'searchControl']
-        }, {
-        searchControlProvider: 'yandex#search'
+        controls: ['zoomControl']
       });
     }
     else {
       myMap = new ymaps.Map("#map", {
         center: [55.86657036, 37.51180592],
         zoom: 16,
-        controls: ['zoomControl', 'searchControl']
-        }, {
-        searchControlProvider: 'yandex#search'
+        controls: ['zoomControl']
       });
     }
   }

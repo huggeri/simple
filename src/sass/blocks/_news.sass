@@ -43,6 +43,8 @@
     &__item
       max-width: 377px
       &:hover
+        .new__title
+          text-decoration: underline
         .news__text
           text-decoration: underline
       img
@@ -97,7 +99,7 @@
       &__text
         font-size: 16px
         line-height: 1.4
-        max-height: 154px
+        max-height: 157px
       
       &-block
         justify-content: flex-start
@@ -114,6 +116,14 @@
 
       &__button
         margin-top: 30px
+
+@media (max-width: 992px)
+  .news__item
+    &:hover
+      .new__title
+        text-decoration: none
+      .news__text
+        text-decoration: none
 
 @media (max-width: 768px)
   .new
@@ -169,7 +179,8 @@
         text-align: center
 
         img
-          width: 90%
+          width: 243px
+          hight: 180px
 
       &__button
         width: 170px
