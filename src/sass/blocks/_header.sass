@@ -81,8 +81,11 @@
     right: 50px
     top: 26px
     z-index: 100
+    background-color: $main-color
+    border: none
+    outline: none
     &:hover
-      background-color: $main-color
+      cursor: pointer
 
     img
       width: 20px
@@ -176,10 +179,15 @@
       margin-left: 60px
 
 @media (max-width: 992px)
-  .navbar__logo
-    &:hover
-      .logo__text
-        color: $text-color
+  .navbar
+    &__logo
+      &:hover
+        .logo__text
+          color: $text-color
+
+    &__burger-button
+      &:hover
+        cursor: default
 
   .info
     &__phone

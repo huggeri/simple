@@ -1,14 +1,22 @@
 $(document).ready(function() {
   var mapInited = false;
   $(window).scroll(function () {
-    if($(window).scrollTop() > 500 && !mapInited) {
+    if($(window).scrollTop() > 400 && !mapInited) {
       mapInited = true;
-      ymaps.ready(init);
+      if($(window).width() > 768) {
+        $('#map').attr('src','https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6bb8c56bfba77283f9149b6ae7b15d8b074f699499121b7c835ec5dc8950a32e&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false')
+      }
+      else if($(window).width() > 567) {
+        $('#map').attr('src','https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aae917d14dc9b5ff573da4112abad16198171c7ab2d05ce074ffa52126cfd7f11&amp;width=100%25&amp;height=900&amp;lang=ru_RU&amp;scroll=false')
+      }
+      else {
+        $('#map').attr('src','https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aae917d14dc9b5ff573da4112abad16198171c7ab2d05ce074ffa52126cfd7f11&amp;width=100%25&amp;height=750&amp;lang=ru_RU&amp;scroll=false')
+      }
     }
   });
 });
 
-function init(){
+/*function init(){
   var myMap;
 
   if(!$('header').hasClass('thanks')) {
@@ -56,4 +64,4 @@ function init(){
     });
 
   myMap.geoObjects.add(myPlacemark);
-}
+}*/

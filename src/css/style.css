@@ -344,64 +344,72 @@ template {
 
 @font-face {
   font-family: 'Proxima Nova - Semibold';
-  src: url("../fonts/ProximaNova/ProximaNova-Semibold.eot");
-  src: local("Proxima Nova Semibold"), local("ProximaNova-Semibold"), url("../fonts/ProximaNova/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Semibold.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNova-Semibold.eot");
+  src: local("Proxima Nova Semibold"), local("ProximaNova-Semibold"), url("../fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype"), url("../fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova - Extrabold';
-  src: url("../fonts/ProximaNova/ProximaNova-Extrabld.eot");
-  src: local("Proxima Nova Extrabold"), local("ProximaNova-Extrabld"), url("../fonts/ProximaNova/ProximaNova-Extrabld.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Extrabld.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Extrabld.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNova-Extrabld.svg#ProximaNova-Extrabld") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNova-Extrabld.eot");
+  src: local("Proxima Nova Extrabold"), local("ProximaNova-Extrabld"), url("../fonts/ProximaNova-Extrabld.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Extrabld.woff") format("woff"), url("../fonts/ProximaNova-Extrabld.ttf") format("truetype"), url("../fonts/ProximaNova-Extrabld.svg#ProximaNova-Extrabld") format("svg");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Bold';
-  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
-  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNova-Bold.svg#ProximaNova-Bold") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNova-Bold.eot");
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.svg#ProximaNova-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Regular';
-  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
-  src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Thin';
-  src: url("../fonts/ProximaNovaT/ProximaNovaT-Thin.eot");
-  src: local("Proxima Nova Thin"), local("ProximaNovaT-Thin"), url("../fonts/ProximaNovaT/ProximaNovaT-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaT/ProximaNovaT-Thin.woff") format("woff"), url("../fonts/ProximaNovaT/ProximaNovaT-Thin.ttf") format("truetype"), url("../fonts/ProximaNovaT/ProximaNovaT-Thin.svg#ProximaNovaT-Thin") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNovaT-Thin.eot");
+  src: local("Proxima Nova Thin"), local("ProximaNovaT-Thin"), url("../fonts/ProximaNovaT-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaT-Thin.woff") format("woff"), url("../fonts/ProximaNovaT-Thin.ttf") format("truetype"), url("../fonts/ProximaNovaT-Thin.svg#ProximaNovaT-Thin") format("svg");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Light';
-  src: url("../fonts/ProximaNova/ProximaNova-Light.eot");
-  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("../fonts/ProximaNova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNova-Light.svg#ProximaNova-Light") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNova-Light.eot");
+  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype"), url("../fonts/ProximaNova-Light.svg#ProximaNova-Light") format("svg");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Rg Italic';
-  src: url("../fonts/ProximaNova/ProximaNova-RegularIt.eot");
-  src: local("Proxima Nova Regular Italic"), local("ProximaNova-RegularIt"), url("../fonts/ProximaNova/ProximaNova-RegularIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-RegularIt.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-RegularIt.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNova-RegularIt.svg#ProximaNova-RegularIt") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNova-RegularIt.eot");
+  src: local("Proxima Nova Regular Italic"), local("ProximaNova-RegularIt"), url("../fonts/ProximaNova-RegularIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-RegularIt.woff") format("woff"), url("../fonts/ProximaNova-RegularIt.ttf") format("truetype"), url("../fonts/ProximaNova-RegularIt.svg#ProximaNova-RegularIt") format("svg");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Proxima Nova Bold It';
-  src: url("../fonts/ProximaNova/ProximaNova-BoldIt.eot");
-  src: local("Proxima Nova Bold Italic"), local("ProximaNova-BoldIt"), url("../fonts/ProximaNova/ProximaNova-BoldIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-BoldIt.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-BoldIt.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNova-BoldIt.svg#ProximaNova-BoldIt") format("svg");
+  font-display: fallback;
+  src: url("../fonts/ProximaNova-BoldIt.eot");
+  src: local("Proxima Nova Bold Italic"), local("ProximaNova-BoldIt"), url("../fonts/ProximaNova-BoldIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-BoldIt.woff") format("woff"), url("../fonts/ProximaNova-BoldIt.ttf") format("truetype"), url("../fonts/ProximaNova-BoldIt.svg#ProximaNova-BoldIt") format("svg");
   font-weight: bold;
   font-style: italic;
 }
@@ -823,10 +831,13 @@ template {
   right: 50px;
   top: 26px;
   z-index: 100;
+  background-color: #ffc800;
+  border: none;
+  outline: none;
 }
 
 .navbar__burger-button:hover {
-  background-color: #ffc800;
+  cursor: pointer;
 }
 
 .navbar__burger-button img {
@@ -955,6 +966,9 @@ template {
 @media (max-width: 992px) {
   .navbar__logo:hover .logo__text {
     color: #000000;
+  }
+  .navbar__burger-button:hover {
+    cursor: default;
   }
   .info__phone:hover .info__text {
     color: #000000;
@@ -1133,6 +1147,7 @@ a {
   width: 304px;
   height: 58px;
   margin-top: 65px;
+  text-transform: uppercase;
 }
 
 input {
@@ -2549,13 +2564,7 @@ div.invalid {
   position: absolute;
   top: 141px;
   left: 7.8%;
-  z-index: 1;
-}
-
-.map {
-  width: 100%;
-  height: 666px;
-  z-index: 0;
+  z-index: 10;
 }
 
 @media (max-width: 1199px) {
@@ -2574,9 +2583,6 @@ div.invalid {
     right: 0;
     margin: 0 auto;
   }
-  .map {
-    height: 900px;
-  }
 }
 
 @media (max-width: 567px) {
@@ -2585,10 +2591,6 @@ div.invalid {
   }
   .brif__form {
     top: 70px;
-    margin-bottom: 50px;
-  }
-  .map {
-    height: 750px;
   }
 }
 
