@@ -57,7 +57,7 @@ gulp.task('move-fonts', function(cb) {
 var tinypng = require('gulp-tinypng-compress');
  
 gulp.task('tinypng', function (cb) {
-  gulp.src('src/img/**/*.{png,jpg,jpeg,svg}')
+  gulp.src('src/img/**/*.{png,jpg,jpeg}')
     .pipe(tinyPNG({
         key: 'HPULULvNdCHMLxBYmK6evKEyS719KzXe'
     }))
@@ -66,7 +66,7 @@ gulp.task('tinypng', function (cb) {
     cb();
 });
 
-gulp.task('default', gulp.parallel('tinypng', function (cb) {
+gulp.task('default', gulp.parallel('tinypng', 'minify-css', 'minify-html', function (cb) {
   cb();
 }));
 

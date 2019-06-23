@@ -1065,7 +1065,6 @@ a {
 
 .button {
   background-color: #ffc800;
-  text-transform: uppercase;
   border: none;
   color: #000000;
 }
@@ -1585,6 +1584,7 @@ div.invalid {
   font-size: 18px;
   line-height: 40px;
   margin-top: 50px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1199px) {
@@ -1756,6 +1756,7 @@ div.invalid {
   font-family: 'Proxima Nova - Semibold', sans-serif;
   font-size: 15px;
   z-index: 2;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1300px) {
@@ -2403,6 +2404,7 @@ div.invalid {
   margin: 50px auto 0 auto;
   font-size: 20px;
   line-height: 28px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1300px) {
