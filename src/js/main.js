@@ -5,9 +5,9 @@ function makeBorder(bgcClass, blockClass, borderSide, distanse, newWidth) {
 }
 
 $(document).ready(function() {
-  $('#form-name').val();
-  $('#form-phone').val();
-
+  $('#form-name').val('');
+  $('#form-phone').val('');
+  
   //рассчёты для фона в шапке и преимуществах
   function calcBgc() {
     // переменные для рассчёта фона

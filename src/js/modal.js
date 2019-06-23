@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   close.on('click', function () {
     hideModal();
-    $('#form-name').val();
-    $('#form-phone').val();
+    $('#form-name').val('');
+    $('#form-phone').val('');
   });
 });
