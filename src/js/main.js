@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $('.navigate-buttons').fadeOut('fast');
   // очищаем форму
   $('#form-name').val('');
   $('#form-phone').val('');
@@ -139,6 +138,10 @@ $(document).ready(function() {
   // появляются и исчезают кнопки
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 400) {
+      if($('.navigate-buttons').hasClass('hidden'))
+      {
+        $('.navigate-buttons').removeClass('hidden');
+      }
       $('.navigate-buttons').fadeIn('slow', 'linear');
     }
     else {

@@ -9,8 +9,8 @@
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    justify-content: space-between
-    margin-left: 32px
+    justify-content: flex-start
+    margin-left: 20px
   
   &__title
     top: -52px
@@ -22,6 +22,8 @@
     display: flex
     flex-direction: column
     align-items: center
+    margin-left: 9px
+    margin-right: 9px
     margin-bottom: 21px
     text-align: center
     background-color: rgba(0, 0, 0, 0.6)
@@ -38,6 +40,8 @@
         &__image
           filter: grayscale(0%)
           transition: 1s
+    &:nth-child(3n+3)
+      margin-right: 0
     
   &__image
     position: absolute
@@ -74,6 +78,12 @@
     &__item
       width: 330px
       height: 206.58px
+      margin-left: 10px
+      margin-right: 10px
+      &:nth-child(3n+3)
+        margin-right: 10px
+      &:nth-child(2n+2)
+        margin-right: 0
 
     &__title
       top: -47px
@@ -89,6 +99,12 @@
     &__block
       justify-content: center
       margin-left: 0
+
+    &__item
+      margin-left: 0
+      margin-right: 0
+      &:nth-child(3n+3)
+        margin-right: 0
 
     &__title
       top: -65px
