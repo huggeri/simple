@@ -108,25 +108,23 @@
     flex-direction: row
     margin-right: 45px
     margin-top: -5px
+    text-transform: uppercase
+    text-decoration: none
+    color: $text-color
     &:hover
-      .info__text
-        color: $main-color
-        &_reg
-          color: $main-color
-
-  &__image
-    margin-right: 5px
-    margin-top: 13px
+      color: $main-color
 
   &__text
     +semibold
     font-size: 18px
     line-height: 40px
-    text-transform: uppercase
-    text-decoration: none
-    color: $text-color
     &_reg
       +reg
+
+  &__image
+    margin-right: 5px
+    margin-top: 13px
+
 
   &__button
     width: 138px
@@ -192,10 +190,7 @@
   .info
     &__phone
       &:hover
-        .info__text
-          color: $text-color
-          &_reg
-            color: $text-color
+        color: $text-color
 
 @media (max-width: 768px)
   .header

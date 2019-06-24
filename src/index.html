@@ -8,7 +8,7 @@
   <link rel="icon" href="favicon.jpg">
   <title>Монтаж отопления и сантехники</title>
 
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Yandex.Metrika counter -->
   <script>
@@ -48,14 +48,14 @@
         </button>
         <!-- /.navbar__menu -->
         <div class="info navbar__info">
-          <div class="info__phone">
+          <a class="info__phone" target="_blank" href="tel:+78633422221">
             <div class="info__image">
               <img src="img/header/receiver.png" alt="трубка телефонная">
             </div>
-            <a href="tel:+78633422221" class="info__text" target="_blank">
+            <span class="info__text">
               <span class="info__text_reg">+7 (863)</span> 342-22-21
-            </a>
-          </div>
+            </span>
+          </a>
           <button class="button info__button" id="header-button">Заказать звонок</button>
         </div>
         <!-- /.navbar__info -->
@@ -453,8 +453,10 @@
             <!-- /.news__item -->
           </div>
           <!-- /.news-block -->
-          <button class="button news__button">читать все новости</button>
-          <!-- /.button news__button -->
+          <div class="news__button-block">
+            <button class="button news__button">читать все новости</button>
+            <!-- /.button news__button -->
+          </div>
         </div>
         <!-- /.container -->
       </div>
@@ -559,9 +561,9 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
-  <script src="js/main.min.js"></script>
-  <script src="js/navbar.min.js"></script>
-  <script src="js/modal.min.js"></script>
-  <script src="js/map.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>
