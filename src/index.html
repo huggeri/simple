@@ -466,16 +466,20 @@
   </main>
   
   <div class="section brif-section">
-    <iframe name="votar" style="display:none;"></iframe>
-    <form class="form brif__form" id="form" method="post" target="votar" action="mail.php" onsubmit="if($('#form-phone').val().length > 16 && $('#form-name').val().length > 1 && !$('#form-phone').hasClass('invalid') && !$('#form-name').hasClass('invalid')) { ym(54165706, 'reachGoal', 'form'); $('#modal').removeClass('hidden'); return true; } else { return false; }">
-      <span class="form__title">оставьте <span class="form__title_yellow">заявку</span></span>
-      <!-- /.form__title -->
-      <input class="form__name" type="text" id="form-name" name="username" placeholder="Введите Ваше имя">
-      <input class="form__phone" type="text" id="form-phone" name="userphone" placeholder="Введите Ваш номер телефона">
-      <button class="button form__button" id="form-button" type="submit">заказать звонок</button>
-      <!-- /.button form__button -->
-    </form>
-    <!-- /.form brif__form -->
+    <div class="container">
+      <iframe name="votar" style="display:none;"></iframe>
+      <form class="form brif__form" id="form" method="post" target="votar" action="mail.php" onsubmit="if($('#form-phone').val().length > 16 && $('#form-name').val().length > 1 && !$('#form-phone').hasClass('invalid') && !$('#form-name').hasClass('invalid')) { ym(54165706, 'reachGoal', 'form'); $('#modal').removeClass('hidden'); return true; } else { return false; }">
+        <span class="form__title">оставьте <span class="form__title_yellow">заявку</span></span>
+        <!-- /.form__title -->
+        <input class="form__name" type="text" id="form-name" name="username" placeholder="Введите Ваше имя">
+        <input class="form__phone" type="text" id="form-phone" name="userphone" placeholder="Введите Ваш номер телефона">
+        <button class="button form__button" id="form-button" type="submit">заказать звонок</button>
+        <!-- /.button form__button -->
+      </form>
+      <!-- /.form brif__form -->
+    </div>
+    <!-- /.container -->
+
     <script id="map"></script>
     <!-- /#map.map -->
   </div>

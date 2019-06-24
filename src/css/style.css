@@ -2613,16 +2613,15 @@ div.invalid {
   height: 666px;
 }
 
+.brif-section .container {
+  position: relative;
+}
+
 .brif__form {
   position: absolute;
   top: 141px;
   z-index: 10;
-}
-
-@media (max-width: 1199px) {
-  .brif__form {
-    left: 8%;
-  }
+  left: 30px;
 }
 
 @media (max-width: 768px) {

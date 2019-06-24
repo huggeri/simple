@@ -85,19 +85,4 @@ $(document).ready(function() {
     },
     errorClass: 'invalid'
   });
-
-  // двигаем форму правильно
-  if($(window).width() > 1199) {
-    calcleftForForm();
-  }
-  $(window).resize(function () {
-    if($(window).width() > 1199) {
-      calcleftForForm();
-    }
-  });
 });
-
-// двигаем форму правильно
-function calcleftForForm() {
-  $('.brif__form').css('left', ($('.header-block').width() - $('.header-block .container').width()) / 2 + 30);
-}
