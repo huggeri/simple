@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Где мы находимся</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header-block">
+    <div class="header__bgc"></div>
+    <div class="container">
+      <nav class="navbar header__navbar">
+        <a href="index.html" class="logo navbar__logo">
+          <img src="img/header/logo.png" alt="лого">
+          <span class="logo__text">logo</span>
+        </a>
+        <!-- /.navbar__logo -->
+        <div class="navbar__menu">
+          <a href="index.html#services" class="navbar__text">Услуги</a>
+          <a href="index.html#services" class="navbar__text">Цены</a>
+          <a href="index.html#reviews" class="navbar__text">Отзывы</a>
+          <a href="index.html#news" class="navbar__text">Новости</a>
+          <a href="index.html#contacts" class="navbar__text">Контакты</a>
+        </div>
+        <button class="navbar__burger-button hidden" id="burger">
+          <img src="img/header/burger.png" alt="меню">
+        </button>
+        <!-- /.navbar__menu -->
+        <div class="info navbar__info">
+          <a class="info__phone" target="_blank" href="tel:+78633422221">
+            <div class="info__image">
+              <img src="img/header/receiver.png" alt="трубка телефонная">
+            </div>
+            <span class="info__text">
+              <span class="info__text_reg">+7 (863)</span> 342-22-21
+            </span>
+          </a>
+          <button class="button info__button" id="header-button">Заказать звонок</button>
+        </div>
+        <!-- /.navbar__info -->
+      </nav>
+      <!-- navbar header__navbar -->
+    </div>
+    <!-- ./container-->
+  </header>
+  <!-- ./header-block-->
+
+  <div class="map">
+    <script id="map"></script>
+  </div>
+
+  <footer class="section contacts-section" id="contacts">
+    <div class="container">
+        <div class="contacts-block">
+            <div class="contacts__address">
+              <img src="img/footer/address.png" alt="геоуказатель">
+              <a class="contacts__text" href="address.html">г. Москва, ул. Советская 48 корп. 3</a>
+            </div>
+            <!-- /.contacts__address -->
+            <div class="contacts__social">
+              <a href="https://www.instagram.com/" class="contacts__site" target="_blank">
+                <img class="contacts__image" src="img/footer/social-1.png" alt="инстаграм">
+              </a>
+              <a href="https://vk.com/feed" class="contacts__site" target="_blank">
+                <img class="contacts__image" src="img/footer/social-2.png" alt="вк">
+              </a>
+              <a href="https://ok.ru/" class="contacts__site" target="_blank">
+                <img class="contacts__image" src="img/footer/social-3.svg" alt="одноклассники">
+              </a>
+            </div>
+            <!-- /.contacts__social -->
+            <div class="contacts__other">
+              <div class="contacts__mail">
+                <img src="img/footer/mail.png" alt="мэил">
+                <a href="mailto:infosanteh@gmail.com" class="contacts__text_small" target="_blank" lang="en">infosanteh@gmail.com</a>
+              </div>
+              <!-- /.contacts__mail -->
+              <div class="contacts__phone">
+                <img src="img/footer/phone.png" alt="телефон">
+                <a href="tel:+78633422221" class="contacts__text_small" target="_blank">
+                  +7 (863)
+                  <span class="contacts__text_bold"> 342-22-21</span>
+                </a>
+              </div>
+              <!-- /.contacts__phone -->
+            </div>
+            <!-- /.contacts__other -->
+        </div>
+        <!-- /.contacts-block -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.section contacts-section -->
+
+  <div class="navigate-buttons hidden">
+    <button class="button navigate-buttons__up" id="up-button">
+      <img src="img/brif/down.png" alt="вверх">
+    </button>
+    <button class="button navigate-buttons__down" id="down-button">
+      <img src="img/brif/down.png" alt="вниз">
+    </button>
+  </div>
+  <!-- /.navigate-buttons -->
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <h4 class="modal-dialog__text">Ваша заявка принята и успешно отправлена. Спасибо. Мы вам перезвоним.</h4>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/address.js"></script>
+</body>
+</html>

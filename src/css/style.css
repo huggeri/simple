@@ -2671,6 +2671,11 @@ div.invalid {
   font-size: 20px;
   line-height: 28px;
   color: #ffffff;
+  text-decoration: none;
+}
+
+.contacts__text:hover {
+  color: #ffc800;
 }
 
 .contacts__text_small {
@@ -2833,6 +2838,9 @@ div.invalid {
 @media (max-width: 992px) {
   .contacts__site:hover {
     background-color: #ffffff;
+  }
+  .contacts__text:hover {
+    color: #ffffff;
   }
   .contacts__text_small:hover {
     color: #ffffff;
