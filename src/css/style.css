@@ -1124,20 +1124,20 @@ a {
   border-left-style: none;
 }
 
+.form__name:placeholder-shown, .form__phone:placeholder-shown {
+  font-family: 'Proxima Nova Rg Italic';
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.65;
+  color: #000000;
+}
+
 .form__name {
   margin-top: 37px;
 }
 
 .form__phone {
   margin-top: 33px;
-}
-
-.form__phone:placeholder-shown {
-  font-family: 'Proxima Nova Rg Italic';
-  font-size: 18px;
-  line-height: 28px;
-  opacity: 0.65;
-  color: #000000;
 }
 
 .form__button {
