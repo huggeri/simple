@@ -66,7 +66,7 @@ gulp.task('tinypng', function (cb) {
     cb();
 });
 
-gulp.task('default', gulp.parallel('minify-css', function (cb) {
+gulp.task('default', gulp.parallel('minify-js', function (cb) {
   cb();
 }));
 

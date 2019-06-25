@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     responsive: [ 
       {
-        breakpoint: 1199,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

@@ -5,7 +5,7 @@ $(document).ready(function() {
   $(window).resize(showHideBurgerMenu);
   // при клике на бургер раскрывается меню
     $('#burger').click(function() {
-      if($(window).width() <= 1199) {
+      if($('.header-block .container').width() <= 750) {
         if(!$('.navbar__menu').hasClass('navbar__menu_active')) {
           $('.navbar__menu').addClass('navbar__menu_active');
         }
@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
     // если убрали мышь с меню - оно исчезает
     $('.navbar__menu').mouseleave(function() {
-      if($(window).width() <= 1199) {
+      if($('.header-block .container').width() <= 750) {
         if($('.navbar__menu').hasClass('navbar__menu_active')) {
           $('.navbar__menu').removeClass('navbar__menu_active');
         }
@@ -44,7 +44,7 @@ $(document).ready(function() {
 });
 
 function showHideBurgerMenu() {
-  if($(window).width() > 1199) {
+  if($('.header-block .container').width() > 750) {
     if(!$('.navbar__burger-button').hasClass('hidden')) {
       $('.navbar__burger-button').addClass('hidden');
     }

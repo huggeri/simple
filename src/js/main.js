@@ -7,20 +7,20 @@ $(document).ready(function() {
     var add = 0;
 
     // width зависит от размера окна и контейнеров
-    if ($(window).width() > 1300) {
+    if ($('.header-block .container').width() >= 1200) {
       percent = 34.1, percentAdv = 63;
     } 
-    else if ($(window).width() > 1199) {
-      percent = 34.1, percentAdv = 58;
+    else if ($('.header-block .container').width() >= 1100) {
+      percent = 35.2, percentAdv = 58;
     }
-    else if ($(window).width() > 768) {
-      percent = 55.7, percentAdv = 85;
+    else if ($('.header-block .container').width() >= 750) {
+      percent = 85.2, percentAdv = 100;
     }
-    else if ($(window).width() > 567) {
-      percent = 80.8, percentAdv = 100, add = distanse;
+    else if ($('.header-block .container').width() >= 550) {
+      percent = 78.4, percentAdv = 100, add = distanse;
     }
     else {
-      percent = 78, percentAdv = 100, add = distanse;
+      percent = 75, percentAdv = 100, add = distanse;
     }
 
     // считаем ширину
