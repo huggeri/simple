@@ -8,19 +8,20 @@ $(document).ready(function() {
 
     // width зависит от размера окна и контейнеров
     if ($('.header-block .container').width() >= 1200) {
+      $('.header__bgc').css('display', 'block');
       percent = 34.1, percentAdv = 63;
     } 
     else if ($('.header-block .container').width() >= 1100) {
+      $('.header__bgc').css('display', 'block');
       percent = 35.2, percentAdv = 58;
     }
     else if ($('.header-block .container').width() >= 750) {
-      percent = 85.2, percentAdv = 100;
-    }
-    else if ($('.header-block .container').width() >= 550) {
-      percent = 78.4, percentAdv = 100, add = distanse;
+      $('.header__bgc').css('display', 'none');
+      percentAdv = 100;
     }
     else {
-      percent = 75, percentAdv = 100, add = distanse;
+      $('.header__bgc').css('display', 'none');
+      percentAdv = 100, add = distanse;
     }
 
     // считаем ширину
